@@ -1,10 +1,12 @@
+[![Build Status](https://img.shields.io/travis/sdl/embedded-rest-server.svg?style=flat-square)](https://travis-ci.org/sdl/embedded-rest-server)
+
 # Embedded RESTful Server
 
 This modules provides a minimal service provider interface (SPI) using [`ServiceLoader`][1] to launch an instance of embedded Jetty with potentially a number of [Jersey JAX-RS applications][2] and generic Jetty [context handlers][3].
 
 ## Service Interfaces
 
-You can provide as many as implementations of the following interfaces in your class path to be loaded Java's `ServiceLoader`:
+You can provide as many as implementations of the following interfaces in the class path to be loaded via Java `ServiceLoader`:
 
 * [`LoggingConfigurator`][4] to be loaded in the initial `static` context to be able to apply any logging configuration early when JVM starts.
 * [`ApplicationFactory`][5] to create an instance Jersey JAX-RS application.
@@ -19,7 +21,7 @@ By default, the following implementations are activated provided with the condit
 
 ## Contributing
 
-Please refer to [here][8].
+Please refer to [here](sdl/oss-parent/CONTRIBUTING.md).
 
 ## License
 
@@ -46,5 +48,4 @@ limitations under the License.
 [5]: src/main/java/com/fredhopper/server/spi/ApplicationFactory.java
 [6]: src/main/java/com/fredhopper/server/spi/ContextHandlerFactory.java
 [7]: src/main/java/com/fredhopper/server/spi/RequestLogHandlerFactory.java
-[8]: sdl/oss-parent/CONTRIBUTING.md
 [license]: LICENSE.txt
