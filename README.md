@@ -19,6 +19,22 @@ By default, the following implementations are activated provided with the condit
 
 * A context handler to serve at `/docs` if the environment values either contain existing `${application.name}.root/docs` or `${application.name}.docs.root`.
 
+## Usage
+
+The module provides a standard Java main class that can be used as:
+
+```bash
+$ java OPTIONS com.fredhopper.server.Bootstrap
+```
+
+or alternatively, if `embedded-rest-server.jar` is used:
+
+```bash
+$ java -jar embedded-rest-server.jar
+```
+
+or alternatively, use [`EmbeddedServer`][es] API in your code.
+
 ## Contributing
 
 Please refer to [here](sdl/oss-parent/CONTRIBUTING.md).
@@ -49,3 +65,4 @@ limitations under the License.
 [6]: src/main/java/com/fredhopper/server/spi/ContextHandlerFactory.java
 [7]: src/main/java/com/fredhopper/server/spi/RequestLogHandlerFactory.java
 [license]: LICENSE.txt
+[es]: src/main/java/com/fredhopper/server/EmbeddedServer.java

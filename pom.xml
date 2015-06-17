@@ -47,6 +47,7 @@
 					<archive>
 						<manifest>
 							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+							<mainClass>com.fredhopper.server.Bootstrap</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
