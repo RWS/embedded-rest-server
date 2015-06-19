@@ -1,4 +1,4 @@
-[![Build Status](https://img.shields.io/travis/sdl/embedded-rest-server.svg?style=flat-square)](https://travis-ci.org/sdl/embedded-rest-server)
+[![Build Status](https://img.shields.io/travis/sdl/embedded-rest-server.svg?style=flat-square)](https://travis-ci.org/sdl/embedded-rest-server) [![Maven  Central](https://img.shields.io/maven-central/v/com.fredhopper.server/embedded-rest-server.svg?style=flat-square)](http://search.maven.org/#browse%7C44355596)
 
 # Embedded RESTful Server
 
