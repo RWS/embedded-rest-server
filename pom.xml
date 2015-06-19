@@ -112,7 +112,7 @@
 	<scm>
 		<url>https://github.com/sdl/embedded-rest-server</url>
 		<connection>scm:git:https://github.com/sdl/embedded-rest-server.git</connection>
-		<developerConnection>scm:git:git@github.com/sdl/embedded-rest-server.git</developerConnection>
+		<developerConnection>scm:git:git@github.com:sdl/embedded-rest-server.git</developerConnection>
 	  <tag>v0.1.0</tag>
   </scm>
 
