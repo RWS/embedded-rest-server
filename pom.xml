@@ -9,7 +9,7 @@
 
 	<groupId>com.fredhopper.server</groupId>
 	<artifactId>embedded-rest-server</artifactId>
-	<version>0.1.0</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>RESTful Embedded Server</name>
 
@@ -23,8 +23,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<version.environment-api>RELEASE</version.environment-api>
-		<version.jersey>2.17</version.jersey>
-		<version.jetty>9.2.10.v20150310</version.jetty>
+		<version.jersey>2.18</version.jersey>
+		<version.jetty>9.3.0.v20150612</version.jetty>
 		<version.junit>4.12</version.junit>
 		<version.truth>0.26</version.truth>
 	</properties>
@@ -113,7 +113,6 @@
 		<url>https://github.com/sdl/embedded-rest-server</url>
 		<connection>scm:git:https://github.com/sdl/embedded-rest-server.git</connection>
 		<developerConnection>scm:git:git@github.com:sdl/embedded-rest-server.git</developerConnection>
-	  <tag>v0.1.0</tag>
   </scm>
 
 	<licenses>
