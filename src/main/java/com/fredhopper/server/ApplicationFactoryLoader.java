@@ -8,9 +8,6 @@ import java.util.function.Function;
 import javax.ws.rs.core.Application;
 
 import org.eclipse.jetty.servlet.ServletContextHandler;
-import org.eclipse.jetty.servlet.ServletHolder;
-import org.glassfish.jersey.server.ResourceConfig;
-import org.glassfish.jersey.servlet.ServletContainer;
 
 import com.fredhopper.environment.Environment;
 import com.fredhopper.server.spi.ApplicationFactory;
@@ -30,12 +27,7 @@ class ApplicationFactoryLoader implements Function<Environment, Collection<Servl
       if (application == null) {
         continue;
       }
-      ResourceConfig resourceConfig = ResourceConfig.forApplication(application);
-      ServletContainer servletContainer = new ServletContainer(resourceConfig);
-      ServletContextHandler contextHandler = new ServletContextHandler();
-      contextHandler.setContextPath(factory.path());
-      contextHandler.addServlet(new ServletHolder(servletContainer), "/*");
-      handlers.add(contextHandler);
+      handlers.add(new JerseyServletContextHandler(application, factory.path()));
     }
     return handlers;
   }
