@@ -99,7 +99,6 @@ public class EmbeddedServer extends AbstractLifeCycle {
   @Override
   protected void doStartLifeCycle() throws Exception {
     this.server.start();
-    this.server.join();
   }
 
   @Override
