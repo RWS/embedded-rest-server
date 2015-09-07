@@ -27,6 +27,11 @@ public class DocumentationContextHandlerFactory implements ContextHandlerFactory
    * The default context path of the documentation.
    */
   private static final String CONTEXT_PATH = "/" + DEFAULT_DOCS_FOLDER;
+  /**
+   * The directory from which the server/application might be
+   * launched.
+   */
+  private static final String APPLICATION_BASE = "application.base";
 
   @Override
   public ContextHandler createContextHandler(Environment environment) {
@@ -38,6 +43,11 @@ public class DocumentationContextHandlerFactory implements ContextHandlerFactory
     Path root = environment.getApplicationRoot();
     if (root != null && containsDocumentation(root.resolve(DEFAULT_DOCS_FOLDER))) {
       return createDocumentationContext(root.resolve(DEFAULT_DOCS_FOLDER));
+    }
+    String appBasePath = environment.getValue(APPLICATION_BASE);
+    if (appBasePath != null && Files.isDirectory(Paths.get(appBasePath))
+        && containsDocumentation(Paths.get(appBasePath).resolve(DEFAULT_DOCS_FOLDER))) {
+      return createDocumentationContext(Paths.get(appBasePath).resolve(DEFAULT_DOCS_FOLDER));
     }
     return null;
   }
