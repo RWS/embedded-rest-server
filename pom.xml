@@ -23,10 +23,10 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<version.environment-api>RELEASE</version.environment-api>
-		<version.jersey>2.18</version.jersey>
-		<version.jetty>9.3.0.v20150612</version.jetty>
+		<version.jersey>2.22.1</version.jersey>
+		<version.jetty>9.3.6.v20151106</version.jetty>
 		<version.junit>4.12</version.junit>
-		<version.truth>0.26</version.truth>
+		<version.truth>0.28</version.truth>
 	</properties>
 
 	<build>
@@ -41,7 +41,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-jar-plugin</artifactId>
-				<version>2.5</version>
+				<version>2.6</version>
 				<configuration>
 					<archive>
 						<manifest>
@@ -76,36 +76,43 @@
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-server</artifactId>
 			<version>${version.jetty}</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-servlet</artifactId>
 			<version>${version.jetty}</version>
+            <scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-servlets</artifactId>
 			<version>${version.jetty}</version>
+            <scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-io</artifactId>
 			<version>${version.jetty}</version>
+            <scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.jetty</groupId>
 			<artifactId>jetty-util</artifactId>
 			<version>${version.jetty}</version>
+            <scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jersey.core</groupId>
 			<artifactId>jersey-server</artifactId>
 			<version>${version.jersey}</version>
+            <scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jersey.containers</groupId>
 			<artifactId>jersey-container-servlet</artifactId>
 			<version>${version.jersey}</version>
+            <scope>provided</scope>
 		</dependency>
 	</dependencies>
 
