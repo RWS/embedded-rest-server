@@ -35,6 +35,10 @@ $ java -jar embedded-rest-server.jar
 
 or alternatively, use [`EmbeddedServer`][es] API in your code.
 
+**Note** that when all the Maven dependencies, e.g. Jetty and Jersey, *must* be explicitly be declared
+in your POM files. This module only exposes them in `provided` scope to allow downstream dependencies
+to use their own versions.
+
 ## Contributing
 
 Please refer to [here](sdl/oss-parent/CONTRIBUTING.md).
