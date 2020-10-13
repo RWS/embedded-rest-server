@@ -25,7 +25,7 @@
 		<version.environment-api>RELEASE</version.environment-api>
 		<version.jersey>2.22.1</version.jersey>
 		<version.jetty>9.3.6.v20151106</version.jetty>
-		<version.junit>4.12</version.junit>
+		<version.junit>4.13.1</version.junit>
 		<version.truth>0.28</version.truth>
 	</properties>
 
